@@ -1,0 +1,55 @@
+
+개발자와 의사소통하기 위해서 알아두면 좋을 용어 정리
+
+- 클라이언트, 프로트 엔드
+    1. GUI (Graphic User Interface)
+    2. 안드로이드
+    3. iOS
+    4. 웹
+
+- 서버, 백 엔드
+    1. AWS
+    2. Azure
+
+- 개발 언어
+    1. C언어
+    2. 안드로이드 -> 자바, 코틀린
+    3. iOS -> Swift
+    4. 서버 -> 파이썬, 자바스크립트, 등
+
+- 소스코드
+    1. Git 깃
+    2. Github 깃허브, Gitlab,(소스코드 원격 저장소)
+
+- 운영체제
+    1. Unix, 우분투
+    2. 안드로이드
+    3. iOS
+    4. 윈도우
+
+- 데이터
+    1. 데이터 베이스
+    2. MySQL, PostgreSQL, Oracle, 등등
+    3. 빅데이터
+
+- 개발 관련 용어
+    1. 프레임 워크
+    2. Library
+    3. 디버깅
+    4. 레거시
+    5. TDD (Test Driven Development)
+
+- 안드로이드 용어
+    1. Activity
+    2. Dialog
+    3. 애뮬레이터
+    4. 안드로이드 스튜디오
+
+
+- 웹 관련 용어
+    - http, https
+    - 트래픽
+    - html
+    - css
+    - bootstrap
+    - 반응형 (RWD : Responsive Web Design )
