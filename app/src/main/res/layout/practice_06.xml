@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@id/five"
+        android:layout_toLeftOf="@id/five"
+        android:background="#FF9800" />
+
+    <TextView
+        android:id="@+id/two"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/five"
+        android:layout_toLeftOf="@id/three"
+        android:background="#3F51B5" />
+
+    <TextView
+        android:id="@+id/three"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@id/six"
+        android:layout_toRightOf="@id/five"
+        android:background="#9C27B0" />
+
+    <TextView
+        android:id="@+id/four"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/one"
+        android:layout_toLeftOf="@id/five"
+        android:background="#FFC107" />
+
+
+    <TextView
+        android:id="@+id/five"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="#F44336" />
+
+    <TextView
+        android:id="@+id/six"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/five"
+        android:background="#E91E63" />
+
+    <TextView
+        android:id="@+id/seven"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/four"
+        android:layout_toLeftOf="@id/eight"
+        android:background="#03A9F4" />
+
+    <TextView
+        android:id="@+id/eight"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/five"
+        android:layout_toLeftOf="@id/nine"
+        android:background="#009688" />
+
+    <TextView
+        android:id="@+id/nine"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/six"
+        android:layout_toRightOf="@id/five"
+        android:background="#CDDC39" />
+
+</RelativeLayout>
