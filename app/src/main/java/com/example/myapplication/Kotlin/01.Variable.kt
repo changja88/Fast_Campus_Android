@@ -36,7 +36,7 @@ fun main(args:Array<String>){
     println(fix)
 
 
-    fix = 500
+//    fix = 500
 
 
 }

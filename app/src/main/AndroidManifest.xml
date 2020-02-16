@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme">
 
 
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".Calculator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +21,12 @@
         </activity>
 
 
+
+
+        <activity android:name=".Linstener">
+
+        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
