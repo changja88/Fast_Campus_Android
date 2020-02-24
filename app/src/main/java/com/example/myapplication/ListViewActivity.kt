@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_list_view.*
 
 
 class ListViewActivity : AppCompatActivity() {
@@ -23,14 +21,14 @@ class ListViewActivity : AppCompatActivity() {
             carList.add(CarForList("" + i + " 번째 자동차", "" + i + "순위 엔진"))
         }
         val adapter = ListViewAdapter(carList, LayoutInflater.from(this@ListViewActivity))
-        listView.adapter = adapter
-        listView.setOnItemClickListener { parent, view, position, id ->
-            val carName = (adapter.getItem(position) as CarForList).name
-            val carEngine = (adapter.getItem(position) as CarForList).engine
-
-            Toast.makeText(this@ListViewActivity, carName + " " + carEngine, Toast.LENGTH_SHORT)
-                .show()
-        }
+//        listView.adapter = adapter
+//        listView.setOnItemClickListener { parent, view, position, id ->
+//            val carName = (adapter.getItem(position) as CarForList).name
+//            val carEngine = (adapter.getItem(position) as CarForList).engine
+//
+//            Toast.makeText(this@ListViewActivity, carName + " " + carEngine, Toast.LENGTH_SHORT)
+//                .show()
+//        }
     }
 }
 
