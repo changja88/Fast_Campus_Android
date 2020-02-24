@@ -1,0 +1,36 @@
+
+
+
+Task -> Activity
+
+- Stack
+    - 햄버거처럼 아래에서 위로 쌓이는 것
+    - Task가 쌓인다
+
+ex)                                             A
+A  ---->  B  -----> C  ----->  B  ----> A  ---> B
+          A         B          A        B
+                    A                   A
+
+켜지는 방법을 자체 속성으로 가지고 있는 경우
+-> launchMode
+
+켜지는 방법을 지시하는 경우
+-> IntentFalg
+
+
+LaunchMode                다중허용
+- Standard                 O
+- singleTop               조건부 -> 열려고 하는 엑티비티가 현재 엑티비티 라면
+                                   onNewIntent를 호출한다
+----------------------------------------
+- singleTask               X
+- singleInstance           X
+
+인텐트 플레그
+FLAG_ACTIVITY_NEW_TASK
+FLAG_ACTIVTY_SINGLE_TOP
+FLAG_ACTIVTY_CLEAR_TOP
+등등
+
+https://developer.android.com/guide/components/activities/tasks-and-back-stack?hl=ko
