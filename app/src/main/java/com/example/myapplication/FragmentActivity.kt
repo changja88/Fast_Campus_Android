@@ -6,11 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import kotlinx.android.synthetic.main.activity_fragment.*
 
-class FragmentActivity : AppCompatActivity(), FragmentOne.OnDataPassListener {
+class FragmentActivity : AppCompatActivity() {
 
-    override fun onDataPass(data: String?) {
-        Log.d("pass", "" + data)
-    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

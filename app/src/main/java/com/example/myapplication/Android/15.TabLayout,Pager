@@ -1,0 +1,14 @@
+
+
+
+
+Tablayout, Pager
+
+Pager
+- 종이 넘기듯이 화면을 넘겨는 역할
+
+TabLaout
+- tab을 담당하는 역할
+
+Adapter
+- Tablayout 과 pager를 연결해주는 역할
