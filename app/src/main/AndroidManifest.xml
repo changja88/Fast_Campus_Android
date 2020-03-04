@@ -11,18 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".NetworkActivity">
+        <activity android:name=".RetrofitActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NetworkActivity">
 
-
-        <activity android:name=".AsyncActivity">
         </activity>
-        <activity android:name=".RealmActivity"></activity>
+        <activity android:name=".AsyncActivity"></activity>
+        <activity android:name=".RealmActivity" />
         <activity android:name=".SharedPreferenceActivity" />
         <activity android:name=".TabPager2Activity" />
         <activity android:name=".TabPagerActivity" />
