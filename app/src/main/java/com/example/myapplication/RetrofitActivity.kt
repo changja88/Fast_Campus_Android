@@ -27,7 +27,7 @@ class RetrofitActivity : AppCompatActivity() {
 
         val service = retrofit.create(RetrofitService::class.java)
 
-
+        // GET 요청
         service.getStudentsList().enqueue(object : Callback<ArrayList<PersonFromServer>> {
             override fun onFailure(call: Call<ArrayList<PersonFromServer>>, t: Throwable) {
                 Log.d("retrofitt", "ERROR")
@@ -40,7 +40,7 @@ class RetrofitActivity : AppCompatActivity() {
             ) {
                 if (response.isSuccessful) {
                     val personList = response.body()
-                    Log.d("retrofitt", "res : "+ personList?.get(0)?.age)
+                    Log.d("retrofitt", "res : " + personList?.get(0)?.age)
 
                     val code = response.code()
                     Log.d("retrofitt", "code : " + code)
@@ -48,6 +48,43 @@ class RetrofitActivity : AppCompatActivity() {
                     val header = response.headers()
                     Log.d("retrofitt", "code : " + header)
                 }
+            }
+        })
+        // POST 요청 (1)
+//        val params = HashMap<String, Any>()
+//        params.put("name", "김개똥")
+//        params.put("age", 20)
+//        params.put("intro", "안녕하세요")
+//        service.createStudnet(params).enqueue(object : Callback<PersonFromServer> {
+//            override fun onFailure(call: Call<PersonFromServer>, t: Throwable) {
+//            }
+//
+//            override fun onResponse(
+//                call: Call<PersonFromServer>,
+//                response: Response<PersonFromServer>
+//            ) {
+//                if (response.isSuccessful) {
+//                    val person = response.body()
+//                    Log.d("retrofitt", "name : " + person?.name)
+//                }
+//
+//            }
+//        })
+        // POST 요청 (2)
+        val person = PersonFromServer(name = "김철수", age = 12, intro = "안녕하세요 철수 입니다")
+        service.createStudentEasy(person).enqueue(object : Callback<PersonFromServer> {
+            override fun onFailure(call: Call<PersonFromServer>, t: Throwable) {
+            }
+
+            override fun onResponse(
+                call: Call<PersonFromServer>,
+                response: Response<PersonFromServer>
+            ) {
+                if (response.isSuccessful) {
+                    val person = response.body()
+                    Log.d("retrofitt", "name : " + person?.name)
+                }
+
             }
         })
     }

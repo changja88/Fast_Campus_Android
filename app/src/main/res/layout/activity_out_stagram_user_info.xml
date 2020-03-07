@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OutStagramUserInfo">
+
+
+    <TextView
+        android:layout_margin="32dp"
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="로그아웃"
+        android:textSize="20dp"
+        android:background="#9E1C1C"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/all_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F44336"
+            android:gravity="center"
+            android:text="전체"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/my_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#9C27B0"
+            android:gravity="center"
+            android:text="본인"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/upload"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#3F51B5"
+            android:gravity="center"
+            android:text="업로드"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/user_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFEB3B"
+            android:gravity="center"
+            android:text="정보"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

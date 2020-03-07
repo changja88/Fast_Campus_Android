@@ -27,7 +27,6 @@ class Intent2 : AppCompatActivity() {
 
 
 
-
 //            val number1 = intent.getIntExtra("number1", 0)
 //            val number2: Int = intent.getIntExtra("number2", 0)
 //

@@ -3,25 +3,39 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".MasterApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".RetrofitActivity">
+        <activity android:name=".AppleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NetworkActivity">
+        <activity android:name=".MytubeDetailActivity" />
+        <activity android:name=".MyTubeActivity">
 
         </activity>
-        <activity android:name=".AsyncActivity"></activity>
+        <activity android:name=".OutStagramUploadActivity" />
+        <activity android:name=".OutStagramMyPostListActivity" />
+        <activity android:name=".OutStagramUserInfo" />
+        <activity android:name=".OutStagramPostListActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".EmailSignupActivity" />
+        <activity android:name=".PermissionActivity" />
+        <activity android:name=".RetrofitActivity" />
+        <activity android:name=".NetworkActivity" />
+        <activity android:name=".AsyncActivity" />
         <activity android:name=".RealmActivity" />
         <activity android:name=".SharedPreferenceActivity" />
         <activity android:name=".TabPager2Activity" />
@@ -34,7 +48,7 @@
         <activity android:name=".AddViewActivity" />
         <activity android:name=".LibraryActivity" />
         <activity android:name=".ThreadActivity" />
-        <activity android:name=".Context" />
+        <activity android:name=".ContextActivity" />
         <activity android:name=".Resource" />
         <activity android:name=".NullSafety" />
         <activity android:name=".FragmentActivity" />
