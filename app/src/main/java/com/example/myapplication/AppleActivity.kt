@@ -4,7 +4,6 @@ import android.app.Activity
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,40 +20,43 @@ import retrofit2.Response
 
 class AppleActivity : AppCompatActivity() {
 
+    var mediaPlayer: MediaPlayer? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_apple)
 
+        (application as MasterApplication).service.getSongList().enqueue(
+            object : Callback<ArrayList<Song>> {
+                override fun onFailure(
+                    call: Call<ArrayList<Song>>, t:
+                    Throwable
+                ) {
+                }
 
-        test.setOnClickListener {
-
-            Log.d("abcc", "1111")
-            (application as MasterApplication).service.getSongList().enqueue(
-                object : Callback<ArrayList<Song>> {
-                    override fun onFailure(call: Call<ArrayList<Song>>, t:
-                    Throwable) {
-                    }
-
-                    override fun onResponse(
-                        call: Call<ArrayList<Song>>,
-                        response: Response<ArrayList<Song>>
-                    ) {
-                        if (response.isSuccessful) {
-                            val songList = response.body()
-                            val adapter = MelonAdapter(
-                                songList!!,
-                                LayoutInflater.from(this@AppleActivity),
-                                Glide.with(this@AppleActivity),
-                                this@AppleActivity
-                            )
-                            song_list.adapter = adapter
-                        }
-
+                override fun onResponse(
+                    call: Call<ArrayList<Song>>,
+                    response: Response<ArrayList<Song>>
+                ) {
+                    if (response.isSuccessful) {
+                        val songList = response.body()
+                        val adapter = MelonAdapter(
+                            songList!!,
+                            LayoutInflater.from(this@AppleActivity),
+                            Glide.with(this@AppleActivity),
+                            this@AppleActivity
+                        )
+                        song_list.adapter = adapter
                     }
                 }
-            )
-        }
+            }
+        )
+    }
 
+    override fun onPause() {
+        mediaPlayer?.stop()
+        mediaPlayer?.release()
+        super.onPause()
     }
 
     inner class MelonAdapter(
@@ -77,11 +79,20 @@ class AppleActivity : AppCompatActivity() {
                 play.setOnClickListener {
                     val position: Int = adapterPosition
                     val path = songList.get(position).song
-                    val mediaPlayer = MediaPlayer.create(
-                        this@AppleActivity,
-                        Uri.parse(path)
-                    )
-                    mediaPlayer.start()
+
+                    try {
+                        mediaPlayer?.stop()
+                        mediaPlayer?.release()
+                        mediaPlayer = null
+                        mediaPlayer = MediaPlayer.create(
+                            this@AppleActivity,
+                            Uri.parse(path)
+                        )
+                        mediaPlayer?.start()
+                    } catch (e: Exception) {
+
+                    }
+
                 }
             }
         }
